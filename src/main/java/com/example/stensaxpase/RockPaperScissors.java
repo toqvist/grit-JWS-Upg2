@@ -2,16 +2,9 @@ package com.example.stensaxpase;
 
 import java.util.Random;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
-//@RestController
 public class RockPaperScissors {
 
-    //localhost:8080/
-    //curl -X POST -F 'choice=rock' localhost:8080/
-    //@RequestMapping(path = "/", method = RequestMethod.POST)
     public static String play(String choice) {
 
         String result = "";
@@ -43,6 +36,7 @@ public class RockPaperScissors {
             GameBean.addLoss();
             break;
         case "Draw!":
+            GameBean.addTie();
             break;
         }
         GameBean.addGameRound();

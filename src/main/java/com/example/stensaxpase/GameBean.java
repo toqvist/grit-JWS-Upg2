@@ -3,12 +3,8 @@ package com.example.stensaxpase;
 public class GameBean {
     private static int wins = 0;
     private static int losses = 0;
+    private static int ties = 0;
     private static int gameRounds = 0;
-
-    // public ScoreBean () {
-    //     this.wins = 0;
-    //     this.losses = 0;
-    // }
 
     public static void addWin() {
         wins++;
@@ -16,6 +12,10 @@ public class GameBean {
 
     public static void addLoss () {
         losses++;
+    }
+
+    public static void addTie () {
+        ties++;
     }
 
     public static int getWins () {
@@ -32,12 +32,7 @@ public class GameBean {
 
     public static String getGameState () {
         
-
-        // String pattern = "{ \"wins\":\"%s\", \"losses\":\"%s\", \"ties\": \"%s\"}";
-		// return String.format(pattern, ScoreBean.WINS, ScoreBean.LOSSES, ScoreBean.TIES);
-        
-        //String returnJSON = "{ \"wins\":\"wins\", \"losses\":\"losses\", \"rounds\": \"gameRounds\"}";
-        String returnJSON = "{\"wins\":\"" + wins + "\"}";
+        String returnJSON = "{\"wins\":\"" + wins + "\",\"losses\":\"" + losses + "\",\"ties\":\"" + ties + "\",\"rounds\":\"" + gameRounds + "\"}";
         System.out.println(returnJSON);
         return returnJSON;
     }

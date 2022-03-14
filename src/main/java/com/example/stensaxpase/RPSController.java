@@ -8,9 +8,6 @@ import org.springframework.http.MediaType;
 @RestController
 public class RPSController {
 
-    //@RequestMapping(value = "/", method = RequestMethod.GET)
-    
-
     //localhost:8080/
     //curl -X POST -F 'choice=rock' localhost:8080/
     @RequestMapping(value = "/", method = RequestMethod.POST)
